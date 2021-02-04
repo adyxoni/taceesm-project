@@ -1,0 +1,37 @@
+.collapsible_button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #333333;
+  color: white;
+  text-align: left;
+  transition: background 0.2s;
+  outline: 3px solid white;
+}
+
+.collapsible_button::after {
+  content: "\25be";
+  float: right;
+  transform: scale(1.5);
+}
+
+.collapsible_button--active + .collapsible_content {
+  display: block;
+}
+
+.collapsible_button--active {
+  background: #555555;
+}
+.collapsible_button--active::after {
+  content: "\25b4";
+}
+
+.collapsible_content {
+  padding: 0 15px;
+  background: #eeeeee;
+  display: none;
+  overflow: auto;
+}
